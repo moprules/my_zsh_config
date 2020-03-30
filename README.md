@@ -1,4 +1,4 @@
 # Конфиг для моего zsh
 
 ## Установка
-  source install.sh
+    source install.sh
