@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 alias mountdrive="google-drive-ocamlfuse ~/GDrive"
 alias unmountdrive="fusermount -u ~/GDrive"
 alias go_to_server="ssh root@83.220.175.74"
+alias go_to_mobile="ssh 192.168.0.101 -p 8022"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
