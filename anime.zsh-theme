@@ -21,7 +21,7 @@
 
 # The prompt
 
-PROMPT='%{$reset_color%}[%c] %{$reset_color%}'
+PROMPT='%{$reset_color%}[%c]%(!.#.) %{$reset_color%}'
 
 # The right-hand prompt
 
