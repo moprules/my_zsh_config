@@ -101,6 +101,7 @@ alias mountdrive="google-drive-ocamlfuse ~/GDrive"
 alias unmountdrive="fusermount -u ~/GDrive"
 alias go_to_server="ssh root@82.146.42.7"
 alias go_to_mobile="ssh 192.168.0.100 -p 8022"
+alias py="python"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
