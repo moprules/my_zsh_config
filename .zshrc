@@ -1,3 +1,4 @@
+emulate sh -c 'source /etc/profile'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -110,5 +111,3 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
-
-emulate sh -c 'source /etc/profile'
