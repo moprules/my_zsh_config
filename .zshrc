@@ -111,8 +111,4 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
-for i in /var/lib/snapd/desktop/applications/*.desktop; do
-    if [ ! -f ~/.local/share/applications/${i##*/} ];then
-            ln -s /var/lib/snapd/desktop/applications/${i##*/} ~/.local/share/applications/${i##*/};
-    fi;
-done
+emulate sh -c 'source /etc/profile'
