@@ -1,4 +1,13 @@
 emulate sh -c 'source /etc/profile'
+
+if [ -d "/var/lib/snapd/desktop/applications" ]; then
+    for i in /var/lib/snapd/desktop/applications/*.desktop; do
+        if [ ! -f ~/.local/share/applications/${i##*/} ];then
+            ln -s /var/lib/snapd/desktop/applications/${i##*/} ~/.local/share/applications/${i##*/};
+        fi;
+    done
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
