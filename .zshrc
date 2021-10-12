@@ -1,13 +1,3 @@
-emulate sh -c 'source /etc/profile'
-
-if [ -d "/var/lib/snapd/desktop/applications" ]; then
-    for i in /var/lib/snapd/desktop/applications/*.desktop; do
-        if [ ! -f ~/.local/share/applications/${i##*/} ];then
-            ln -s /var/lib/snapd/desktop/applications/${i##*/} ~/.local/share/applications/${i##*/};
-        fi;
-    done
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -107,10 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias mountdrive="google-drive-ocamlfuse ~/GDrive"
-alias unmountdrive="fusermount -u ~/GDrive"
-alias go_to_server="ssh root@82.146.42.7"
-alias go_to_mobile="ssh 192.168.0.100 -p 8022"
+
 alias py="python3"
 
 export PYENV_ROOT="${HOME}/.pyenv"
