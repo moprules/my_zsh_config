@@ -21,17 +21,18 @@ echo "----------------------------"
 echo "Настраиваем 'all-in' пакеты"
 
 # Чтобы в системе были видны snap пакеты
-snap_apps="emulate sh -c 'source /etc/profile.d/apps-bin-path.sh'"
-if [ -e  /etc/profile.d/apps-bin-path.sh] && !(grep -i "$snap_apps" /etc/zsh/zprofile > /dev/null); then
-    sudo echo "$snap_apps" >>/etc/zsh/zprofile
+snap_config="/etc/profile.d/apps-bin-path.sh"
+snap_str="emulate sh -c 'source $snap_config'"
+if [[ -e  $snap_config ]] && ! grep -q "$snap_str" >>/etc/zsh/zprofile; then
+    echo "$snap_str" >>/etc/zsh/zprofile
 fi
 
 # Чтобы в системы были видны flatpack пакеты
-flatpack_apps="emulate sh -c 'source /etc/profile.d/flatpak.sh'"
-if [ -e  /etc/profile.d/flatpak.sh] && !(grep -i "$flatpack_apps" /etc/zsh/zprofile > /dev/null); then
-    sudo echo "$flatpack_apps" >>/etc/zsh/zprofile
+flatpack_config="/etc/profile.d/flatpak.sh"
+flatpack_str="emulate sh -c 'source $flatpack_config'"
+if [[ -e  $flatpack_config ]] && ! grep -q "$flatpack_str" /etc/zsh/zprofile; then
+    echo "$flatpack_str" >>/etc/zsh/zprofile
 fi
 
-# загружем настройки для zsh
 echo "----------------"
 echo "Перезагрузитесь"
