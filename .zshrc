@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias py="python3"
+alias vpnup="sudo wg-quick up wg0"
+alias vpndown="sudo wg-quick down wg0"
 
 export PYENV_ROOT="${HOME}/.pyenv"
 
